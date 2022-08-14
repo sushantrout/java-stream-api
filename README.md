@@ -1,6 +1,6 @@
 # java-stream-api
+<h1>Create Stream</h1>
 <ol>
-	<li><h1>Create Stream</h1></li>
 	<li> public static <T> java.util.stream.Stream$Builder<T> builder(); <br><br></li>
   <li> public static <T> java.util.stream.Stream<T> empty(); <br><br></li>
   <li> public static <T> java.util.stream.Stream<T> of(T); <br><br></li>
@@ -8,7 +8,8 @@
   <li> public static <T> java.util.stream.Stream<T> iterate(T, java.util.function.UnaryOperator<T>); <br><br></li>
   <li> public static <T> java.util.stream.Stream<T> generate(java.util.function.Supplier<T>); <br><br></li>
   <li> public static <T> java.util.stream.Stream<T> concat(java.util.stream.Stream<? extends T>, java.util.stream.Stream<? extends T>); <br><br><br><br></li>
-  
+  </ol>
+  <ol>
 <li> public abstract java.util.stream.Stream<T> filter(java.util.function.Predicate<? super T>); <br><br></li>
   <li> public abstract <R> java.util.stream.Stream<R> map(java.util.function.Function<? super T, ? extends R>); <br><br></li>
   <li> public abstract java.util.stream.IntStream mapToInt(java.util.function.ToIntFunction<? super T>); <br><br></li>
