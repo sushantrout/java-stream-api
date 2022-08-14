@@ -1,5 +1,5 @@
 # java-stream-api
-<h1>Create Stream</h1>
+<h1>Generate Stream</h1>
 <ol>
 	<li> public static <T> java.util.stream.Stream$Builder<T> builder(); <br><br></li>
   <li> public static <T> java.util.stream.Stream<T> empty(); <br><br></li>
