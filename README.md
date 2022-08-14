@@ -19,9 +19,11 @@
 	<li> public abstract boolean noneMatch(java.util.function.Predicate<? super T>); <br><br></li>
 	<li> public abstract java.util.Optional<T> findFirst(); <br><br></li>
 	<li> public abstract java.util.Optional<T> findAny(); <br><br></li>
+	<li> public abstract java.util.stream.Stream<T> distinct(); <br><br></li>
+	<li> public abstract java.util.stream.Stream<T> peek(java.util.function.Consumer<? super T>); <br><br></li>
   </ol>
 
-
+<h1>Map Stream</h1>
 <ol>
   <li> public abstract <R> java.util.stream.Stream<R> map(java.util.function.Function<? super T, ? extends R>); <br><br></li>
   <li> public abstract java.util.stream.IntStream mapToInt(java.util.function.ToIntFunction<? super T>); <br><br></li>
@@ -31,10 +33,10 @@
   <li> public abstract java.util.stream.IntStream flatMapToInt(java.util.function.Function<? super T, ? extends java.util.stream.IntStream>); <br><br></li>
   <li> public abstract java.util.stream.LongStream flatMapToLong(java.util.function.Function<? super T, ? extends java.util.stream.LongStream>); <br><br></li>
   <li> public abstract java.util.stream.DoubleStream flatMapToDouble(java.util.function.Function<? super T, ? extends java.util.stream.DoubleStream>); <br><br></li>
-  <li> public abstract java.util.stream.Stream<T> distinct(); <br><br></li>
+  
   <li> public abstract java.util.stream.Stream<T> sorted(); <br><br></li>
   <li> public abstract java.util.stream.Stream<T> sorted(java.util.Comparator<? super T>); <br><br></li>
-  <li> public abstract java.util.stream.Stream<T> peek(java.util.function.Consumer<? super T>); <br><br></li>
+  
   <li> public abstract java.util.stream.Stream<T> limit(long); <br><br></li>
   <li> public abstract java.util.stream.Stream<T> skip(long); <br><br></li>
   <li> public abstract void forEach(java.util.function.Consumer<? super T>); <br><br></li>
