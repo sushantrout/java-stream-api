@@ -32,11 +32,11 @@
   <li> public abstract boolean noneMatch(java.util.function.Predicate<? super T>); <br><br></li>
   <li> public abstract java.util.Optional<T> findFirst(); <br><br></li>
   <li> public abstract java.util.Optional<T> findAny(); <br><br></li>
-  public static <T> java.util.stream.Stream$Builder<T> builder(); <br><br></li>
-  public static <T> java.util.stream.Stream<T> empty(); <br><br></li>
-  public static <T> java.util.stream.Stream<T> of(T); <br><br></li>
-  public static <T> java.util.stream.Stream<T> of(T...); <br><br></li>
-  public static <T> java.util.stream.Stream<T> iterate(T, java.util.function.UnaryOperator<T>); <br><br></li>
-  public static <T> java.util.stream.Stream<T> generate(java.util.function.Supplier<T>); <br><br></li>
-  public static <T> java.util.stream.Stream<T> concat(java.util.stream.Stream<? extends T>, java.util.stream.Stream<? extends T>); <br><br></li>
+  <li> public static <T> java.util.stream.Stream$Builder<T> builder(); <br><br></li>
+  <li> public static <T> java.util.stream.Stream<T> empty(); <br><br></li>
+  <li> public static <T> java.util.stream.Stream<T> of(T); <br><br></li>
+  <li> public static <T> java.util.stream.Stream<T> of(T...); <br><br></li>
+  <li> public static <T> java.util.stream.Stream<T> iterate(T, java.util.function.UnaryOperator<T>); <br><br></li>
+  <li> public static <T> java.util.stream.Stream<T> generate(java.util.function.Supplier<T>); <br><br></li>
+  <li> public static <T> java.util.stream.Stream<T> concat(java.util.stream.Stream<? extends T>, java.util.stream.Stream<? extends T>); <br><br></li>
 </ol>
