@@ -19,12 +19,12 @@
 	<li> public abstract boolean noneMatch(java.util.function.Predicate<? super T>); <br><br></li>
 	<li> public abstract java.util.Optional<T> findFirst(); <br><br></li>
 	<li> public abstract java.util.Optional<T> findAny(); <br><br></li>
+	<li> public abstract java.util.Optional<T> min(java.util.Comparator<? super T>); <br><br></li>
+	<li> public abstract java.util.Optional<T> max(java.util.Comparator<? super T>); <br><br></li>
 	<li> public abstract java.util.stream.Stream<T> distinct(); <br><br></li>
 	<li> public abstract java.util.stream.Stream<T> peek(java.util.function.Consumer<? super T>); <br><br></li>
 	<li> public abstract java.util.stream.Stream<T> limit(long); <br><br></li>
 	<li> public abstract java.util.stream.Stream<T> skip(long); <br><br></li>
-	<li> public abstract java.util.Optional<T> min(java.util.Comparator<? super T>); <br><br></li>
-	<li> public abstract java.util.Optional<T> max(java.util.Comparator<? super T>); <br><br></li>
 	<li>public default java.util.stream.Stream<T> takeWhile(java.util.function.Predicate<? super T>);<br><br></li>
 	<li>public default java.util.stream.Stream<T> dropWhile(java.util.function.Predicate<? super T>);<br><br></li>
   </ol>
