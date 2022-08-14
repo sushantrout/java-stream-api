@@ -39,11 +39,6 @@
   <li> public abstract java.util.stream.IntStream flatMapToInt(java.util.function.Function<? super T, ? extends java.util.stream.IntStream>); <br><br></li>
   <li> public abstract java.util.stream.LongStream flatMapToLong(java.util.function.Function<? super T, ? extends java.util.stream.LongStream>); <br><br></li>
   <li> public abstract java.util.stream.DoubleStream flatMapToDouble(java.util.function.Function<? super T, ? extends java.util.stream.DoubleStream>); <br><br></li>
-  
-  <li> public abstract <R> R collect(java.util.function.Supplier<R>, java.util.function.BiConsumer<R, ? super T>, java.util.function.BiConsumer<R, R>); <br><br></li>
-  <li> public abstract <R, A> R collect(java.util.stream.Collector<? super T, A, R>); <br><br></li>
-  
-  <li> public abstract long count(); <br><br></li>
 </ol>
 
 <h1>Reduce Stream</h1>
@@ -65,4 +60,12 @@
   <li> public abstract void forEachOrdered(java.util.function.Consumer<? super T>); <br><br></li>
   <li> public abstract java.lang.Object[] toArray(); <br><br></li>
   <li> public abstract <A> A[] toArray(java.util.function.IntFunction<A[]>); <br><br></li>
+</ol>
+
+<h1>Collect Stream</h1>
+<ol>
+	<li> public abstract <R> R collect(java.util.function.Supplier<R>, java.util.function.BiConsumer<R, ? super T>, java.util.function.BiConsumer<R, R>); <br><br></li>
+  <li> public abstract <R, A> R collect(java.util.stream.Collector<? super T, A, R>); <br><br></li>
+  
+  <li> public abstract long count(); <br><br></li>
 </ol>
