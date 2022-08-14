@@ -21,6 +21,12 @@
 	<li> public abstract java.util.Optional<T> findAny(); <br><br></li>
 	<li> public abstract java.util.stream.Stream<T> distinct(); <br><br></li>
 	<li> public abstract java.util.stream.Stream<T> peek(java.util.function.Consumer<? super T>); <br><br></li>
+	<li> public abstract java.util.stream.Stream<T> limit(long); <br><br></li>
+	<li> public abstract java.util.stream.Stream<T> skip(long); <br><br></li>
+	<li> public abstract java.util.Optional<T> min(java.util.Comparator<? super T>); <br><br></li>
+	<li> public abstract java.util.Optional<T> max(java.util.Comparator<? super T>); <br><br></li>
+	<li>public default java.util.stream.Stream<T> takeWhile(java.util.function.Predicate<? super T>);<br><br></li>
+	<li>public default java.util.stream.Stream<T> dropWhile(java.util.function.Predicate<? super T>);<br><br></li>
   </ol>
 
 <h1>Map Stream</h1>
@@ -34,21 +40,29 @@
   <li> public abstract java.util.stream.LongStream flatMapToLong(java.util.function.Function<? super T, ? extends java.util.stream.LongStream>); <br><br></li>
   <li> public abstract java.util.stream.DoubleStream flatMapToDouble(java.util.function.Function<? super T, ? extends java.util.stream.DoubleStream>); <br><br></li>
   
-  <li> public abstract java.util.stream.Stream<T> sorted(); <br><br></li>
-  <li> public abstract java.util.stream.Stream<T> sorted(java.util.Comparator<? super T>); <br><br></li>
+  <li> public abstract <R> R collect(java.util.function.Supplier<R>, java.util.function.BiConsumer<R, ? super T>, java.util.function.BiConsumer<R, R>); <br><br></li>
+  <li> public abstract <R, A> R collect(java.util.stream.Collector<? super T, A, R>); <br><br></li>
   
-  <li> public abstract java.util.stream.Stream<T> limit(long); <br><br></li>
-  <li> public abstract java.util.stream.Stream<T> skip(long); <br><br></li>
-  <li> public abstract void forEach(java.util.function.Consumer<? super T>); <br><br></li>
+  <li> public abstract long count(); <br><br></li>
+</ol>
+
+<h1>Reduce Stream</h1>
+<ol>
+	<li> public abstract T reduce(T, java.util.function.BinaryOperator<T>); <br><br></li>
+  <li> public abstract java.util.Optional<T> reduce(java.util.function.BinaryOperator<T>); <br><br></li>
+  <li> public abstract <U> U reduce(U, java.util.function.BiFunction<U, ? super T, U>, java.util.function.BinaryOperator<U>); <br><br></li>
+</ol>
+
+<h1>Sort Stream</h1>
+<ol>
+	<li> public abstract java.util.stream.Stream<T> sorted(); <br><br></li>
+  <li> public abstract java.util.stream.Stream<T> sorted(java.util.Comparator<? super T>); <br><br></li>
+</ol>
+
+<h1>Iterate Stream</h1>
+<ol>
+	<li> public abstract void forEach(java.util.function.Consumer<? super T>); <br><br></li>
   <li> public abstract void forEachOrdered(java.util.function.Consumer<? super T>); <br><br></li>
   <li> public abstract java.lang.Object[] toArray(); <br><br></li>
   <li> public abstract <A> A[] toArray(java.util.function.IntFunction<A[]>); <br><br></li>
-  <li> public abstract T reduce(T, java.util.function.BinaryOperator<T>); <br><br></li>
-  <li> public abstract java.util.Optional<T> reduce(java.util.function.BinaryOperator<T>); <br><br></li>
-  <li> public abstract <U> U reduce(U, java.util.function.BiFunction<U, ? super T, U>, java.util.function.BinaryOperator<U>); <br><br></li>
-  <li> public abstract <R> R collect(java.util.function.Supplier<R>, java.util.function.BiConsumer<R, ? super T>, java.util.function.BiConsumer<R, R>); <br><br></li>
-  <li> public abstract <R, A> R collect(java.util.stream.Collector<? super T, A, R>); <br><br></li>
-  <li> public abstract java.util.Optional<T> min(java.util.Comparator<? super T>); <br><br></li>
-  <li> public abstract java.util.Optional<T> max(java.util.Comparator<? super T>); <br><br></li>
-  <li> public abstract long count(); <br><br></li>
 </ol>
