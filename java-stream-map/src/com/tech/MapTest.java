@@ -10,10 +10,10 @@ public class MapTest {
 		List<Employee> employees = EmployeeProvider.getEmployees();
 		
 		//map(java.util.function.Function)
-		//mapToInt(java.util.function.ToIntFunction)
-		//mapToLong(java.util.function.ToLongFunction)
-		//mapToDouble(java.util.function.ToDoubleFunction)
-		//System.out.println("Map");
+		//IntStream  mapToInt(java.util.function.ToIntFunction)
+		//LongStream  mapToLong(java.util.function.ToLongFunction)
+		//DoubleStream  mapToDouble(java.util.function.ToDoubleFunction)
+		System.out.println("Map");
 		employees.stream().map(e -> e.getName()).forEach(System.out::println);
 
 		System.out.println("================================>Flatmap<============================");
@@ -30,6 +30,10 @@ public class MapTest {
 			}
 		}
 		
+		///flatMap(java.util.function.Function>)
+		//IntStream flatMapToInt(java.util.function.Function)
+		//LongStream  flatMapToLong(java.util.function.Function)
+		//DoubleStream  flatMapToDouble(java.util.function.Function)
 		mapedEmployees.stream().flatMap(d -> d.stream()).map(d -> d.getName()).distinct().forEach(System.out::println);
 	}
 }
