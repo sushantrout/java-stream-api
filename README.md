@@ -46,6 +46,8 @@
 <ol>
 	<li> public abstract java.util.stream.Stream<T> sorted(); <br><br></li>
   <li> public abstract java.util.stream.Stream<T> sorted(java.util.Comparator<? super T>); <br><br></li>
+  <li> public abstract java.util.Optional<T> min(java.util.Comparator<? super T>); <br><br></li>
+	<li> public abstract java.util.Optional<T> max(java.util.Comparator<? super T>); <br><br></li>
 </ol>
 
 <h3>Iterate Stream</h3>
@@ -62,8 +64,6 @@
 <li> public abstract java.util.stream.Stream<T> peek(java.util.function.Consumer<? super T>); <br><br></li>
 	<li> public abstract java.util.stream.Stream<T> limit(long); <br><br></li>
 	<li> public abstract java.util.stream.Stream<T> skip(long); <br><br></li>
-<li> public abstract java.util.Optional<T> min(java.util.Comparator<? super T>); <br><br></li>
-	<li> public abstract java.util.Optional<T> max(java.util.Comparator<? super T>); <br><br></li>
 	<li> public abstract <R> R collect(java.util.function.Supplier<R>, java.util.function.BiConsumer<R, ? super T>, java.util.function.BiConsumer<R, R>); <br><br></li>
   <li> public abstract <R, A> R collect(java.util.stream.Collector<? super T, A, R>); <br><br></li>
   
