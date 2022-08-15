@@ -26,9 +26,11 @@ public class FilterTest {
 		boolean anyMatch = employees.stream().anyMatch(idLessThan150P);
 		System.out.println("anyMatch " +anyMatch);
 		
+		//Optional findFirst()
 		String findFirstName = employees.stream().filter(idLessThan150P).findFirst().map(d -> d.name).orElse(null);
 		System.out.println("findFirst " + findFirstName);
 
+		//Optional findAny()
 		Employee findAny = employees.stream().filter(idLessThan150P).findAny().orElse(null);
 		System.out.println("findAny "+findAny);
 		
